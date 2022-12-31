@@ -78,8 +78,8 @@ WSGI_APPLICATION = 'shop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'mysql.connector.django',
-        'NAME': 'dbshop',
-        'USER':'admin',
+        'NAME': 'dbsite1',
+        'USER':'root',
         'PASSWORD':'123456',
         'HOST':'localhost',
         'PORT':'3306',
