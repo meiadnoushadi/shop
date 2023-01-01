@@ -9,3 +9,7 @@ class Auther(models.Model):
     is_active=models.BooleanField(default=True)
     register_date=models.DateTimeField(default=timezone.now)
     email=models.EmailField(max_length=100)
+    image_name=models.CharField(max_length=200,default='nophoto.jpg')
+    
+    def __str__(self) -> str:
+        return f"{self.name} {self.family} {self.age} {self.email} {self.register_date}"

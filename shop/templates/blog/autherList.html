@@ -1,0 +1,38 @@
+{% extends 'mainTemp.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/autherList.css' %}">
+{% endblock style %}
+{% block title %}
+    صفحه بلاگ ها
+{% endblock title %}
+
+{% block content %}
+    <h1 class='title'>لیست نویسندگان</h1>
+
+        {% comment %} {% for auther in autherAll %}
+            <h2> {{auther}}</h2><br> 
+            <h2>auther: {{auther.name}}  {{auther.family}}</h2> <br>
+        {% endfor %} {% endcomment %}
+        <table>
+            <tr>
+                <td>عکس نویسنده</td>
+                <td>کد نویسنده</td>
+                <td>نام</td>
+                <td>نام خانوادگی</td>
+                <td>سن</td>
+                <td>جزئیات نویسنده</td>
+            </tr>
+            {% for auther in autherAll %}
+            <tr>
+                <td><img class="img-person" src="{{media_url}}images/person/{{auther.image_name}}" alt=""></td>
+                <td>{{auther.id}}</td>
+                <td>{{auther.name}}</td>
+                <td>{{auther.family}}</td>
+                <td>{{auther.age}}</td>
+                <td><a class='det' href="#">جزئیات</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+{% endblock content %}
