@@ -1,7 +1,8 @@
-{% load static %}
-{% block style %}
+{% comment %} {% extends "mainTemp.html" %} {% endcomment %}
+{% comment %} {% load static %} {% endcomment %}
+{% comment %} {% block style %}
 <link rel="stylesheet" href="{% static 'css/header.css' %}">
-{% endblock style %}
-<header>
+{% endblock style %} {% endcomment %}
+<header class="container-fluid border">
     <h1>header site</h1>
 </header>
