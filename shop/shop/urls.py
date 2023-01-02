@@ -23,3 +23,6 @@ urlpatterns = [
     path('',include('apps.main.urls')),
     path('blog/',include('apps.blog.urls')),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+
+admin.site.site_header='پنل مدیریت فروشگاه میعاد'
+admin.site.index_title='به پنل مدیریت خوش آمدید'

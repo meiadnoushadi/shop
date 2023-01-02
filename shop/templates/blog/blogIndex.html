@@ -1,32 +1,20 @@
 {% extends 'mainTemp.html' %}
-{% load static %}
-{% block style %}
-<link rel="stylesheet" href="{% static 'css/blogStyle.css' %}">
-{% endblock style %}
 {% block title %}
     صفحه بلاگ ها
 {% endblock title %}
-
 {% block content %}
-    <h1 class='title'>لیست مقالات</h1>
-    <ul class='art'>
-        <li><a href="#">مقاله</a></li>
-        <li><a href="#">مقاله</a></li>
-        <li><a href="#">مقاله</a></li>
-        <li><a href="#">مقاله</a></li>
-        <li><a href="#">مقاله</a></li>
-        <li><a href="#">مقاله</a></li>
-        <li><a href="#">مقاله</a></li>
-        <li><a href="#">مقاله</a></li>
-        <li><a href="#">مقاله</a></li>
-        <li><a href="#">مقاله</a></li>
+    <h1>لیست مقالات</h1>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><a href="#">مقاله</a></li>
+        <li class="list-group-item"><a href="#">مقاله</a></li>
+        <li class="list-group-item"><a href="#">مقاله</a></li>
+        <li class="list-group-item"><a href="#">مقاله</a></li>
+        <li class="list-group-item"><a href="#">مقاله</a></li>
+        <li class="list-group-item"><a href="#">مقاله</a></li>
+        <li class="list-group-item"><a href="#">مقاله</a></li>
+        <li class="list-group-item"><a href="#">مقاله</a></li>
+        <li class="list-group-item"><a href="#">مقاله</a></li>
+        <li class="list-group-item"><a href="#">مقاله</a></li>
     </ul>
     <h1><a href="{% url 'auther_list' %}">لیست نویسندگان</a></h1>
-
-        {% comment %} {% for auther in autherAll %}
-            <h2> {{auther}}</h2><br> 
-            <h2>auther: {{auther.name}}  {{auther.family}}</h2> <br>
-        {% endfor %} {% endcomment %}
-
-
 {% endblock content %}
