@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('apps.main.urls')),
     path('blog/',include('apps.blog.urls')),
+    path('form/',include('apps.formTest.urls')),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
 admin.site.site_header='پنل مدیریت فروشگاه میعاد'

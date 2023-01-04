@@ -1,0 +1,26 @@
+{% extends 'mainTemp.html' %}
+
+{% block title %}ثبت نام{% endblock title %}
+
+{% block content %}
+    <h1>صفحه ورود به سیستم</h1>
+    <form action="" style="text-align:center;">
+        {% csrf_token %}
+        {% comment %} {{form}} {% endcomment %}
+        {% comment %} {{form.as_p}} {% endcomment %}
+        {% comment %} <ul>
+            {{form.as_ul}}
+        </ul> {% endcomment %}
+        <table>
+            {{form.as_table}}
+            <td colspan="2"><input type="submit" value="ورود"> </td>
+        </table>
+        {% comment %} <ul style="list-style-type: none; margin:0; padding:0;">
+            <li> <label for="id_name">نام</label> {{form.name}}</li>
+            <li><label for="id_family">نام خانوادگی</label> {{form.family}}</li>
+            <li><label for="id_age">سن</label> {{form.age}}</li>
+            <li><label for="id_is_active">وضعیت</label> {{form.is_active}}</li>
+            <li><input type="submit" value="ثبت نام"></li>
+        </ul> {% endcomment %}
+    </form>
+{% endblock content %}
